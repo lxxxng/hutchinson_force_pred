@@ -24,8 +24,8 @@ class FeatureGenerator:
                     color_groups[color].append(col)  # Group columns by color
                     
         for color, cols in color_groups.items():
-            df[f'{color}_mean'] = df[cols].mean(axis=1)  # Row-wise mean for each color group
-            df[f'{color}_std'] = df[cols].std(axis=1)    # Row-wise std for each color group
+            df[f'{color}_color_mean'] = df[cols].mean(axis=1)  # Row-wise mean for each color group
+            df[f'{color}_color_std'] = df[cols].std(axis=1)    # Row-wise std for each color group
             
         return df
 
