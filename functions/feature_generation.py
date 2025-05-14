@@ -6,7 +6,7 @@ class FeatureGenerator:
         self.window_size = window_size
         self.sampling_rate = sampling_rate
 
-        # Add overall statistics across all selected features
+    # Add overall statistics across all selected features
     def add_global_statistics(self, df, feature_cols):
         df['global_mean'] = df[feature_cols].mean(axis=1)  # Row-wise mean
         df['global_std'] = df[feature_cols].std(axis=1)    # Row-wise standard deviation
